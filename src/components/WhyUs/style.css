@@ -1,0 +1,26 @@
+.whyus-wrapper{
+ background-color: #ffffff;
+}
+
+.whyus{
+    max-width: 1168px;
+    margin: 0 auto;
+}
+
+.whyus-title{
+    line-height: 36px;
+    margin-bottom: 16px;
+}
+
+.whyus-desc{
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 20px;
+    margin-bottom: 40px;
+}
+
+.whyus-list{
+    display: flex;
+    gap: 32px;
+}
+
