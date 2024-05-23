@@ -1,5 +1,3 @@
-
-
 .banner{
     display: flex;
     justify-content: space-between;
@@ -45,10 +43,6 @@
 .banner-image{
     position: relative;
     z-index: 0;
-}
-
-.banner-image img{
-
 }
 
 .banner-image-background{
