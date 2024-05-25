@@ -1,6 +1,7 @@
 import Banner from './components/Banner'
 import Navbar from './components/Navbar'
 import OurService from './components/OurService'
+import PromoBanner from './components/PromoBanner'
 import Testimonial from './components/Testimonial'
 import WhyUs from './components/WhyUs'
 
@@ -12,6 +13,7 @@ function App() {
       <OurService />
       <WhyUs />
       <Testimonial />
+      <PromoBanner />
     </div>
   )
 }
