@@ -2,6 +2,8 @@ import ThumbIcon from '../assets/thumbs-up.png'
 import TagIcon from '../assets/tag.png'
 import ClockIcon from '../assets/clock.png'
 import AwardIcon from '../assets/award.png'
+import ProfileFirst from '../assets/profile2.png'
+import ProfileSecond from '../assets/profile3.png'
 
 export const navbarLink = ['Our Services', 'Why Us', 'Testimonial', 'FAQ']
 
@@ -41,5 +43,35 @@ export const whyUsData = [
     title: 'Sopir Profesional',
     color: '#5CB85F',
     desc: 'Sopir yang profesional, berpengalaman, jujur, ramah dan selalu tepat waktu',
+  },
+]
+
+export const testimonials = [
+  {
+    id: 1,
+    rating: 5,
+    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod',
+    name: 'John Dee',
+    age: 32,
+    address: 'Bromo',
+    image: ProfileFirst,
+  },
+  {
+    id: 2,
+    rating: 4,
+    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod',
+    name: 'Yunita',
+    age: 25,
+    address: 'Solo',
+    image: ProfileSecond,
+  },
+  {
+    id: 3,
+    rating: 5,
+    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod',
+    name: 'John Dee',
+    age: 32,
+    address: 'Bromo',
+    image: ProfileFirst,
   },
 ]

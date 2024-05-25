@@ -1,0 +1,30 @@
+.testimonial-card{
+    background-color: #F1F3FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 46px;
+    height: 270px;
+    border-radius: 8px;
+}
+
+.testimonial-card-text{
+    display: flex;
+    flex-direction: column;
+    width: 415px;
+    gap:8px;
+    font-size: 14px;
+}
+
+.testimonial-card p:nth-child(1){
+    font-size: 18px;
+    color: #F9CC00;
+}
+
+.testimonial-card p:nth-child(2){
+    font-weight: bold;
+}
+
+.testimonial-card-image img{
+    width: 80px;
+}
