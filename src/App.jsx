@@ -1,4 +1,5 @@
 import Banner from './components/Banner'
+import FAQ from './components/FAQ'
 import Navbar from './components/Navbar'
 import OurService from './components/OurService'
 import PromoBanner from './components/PromoBanner'
@@ -14,6 +15,7 @@ function App() {
       <WhyUs />
       <Testimonial />
       <PromoBanner />
+      <FAQ />
     </div>
   )
 }

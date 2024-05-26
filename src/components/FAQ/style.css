@@ -1,0 +1,29 @@
+.faq-wrapper{
+    background-color: #ffffff;
+}
+
+.faq{
+    max-width: 1168px;
+    margin: 0 auto;
+    padding: 100px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.faq-title h2{
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: bold;
+}
+
+.faq-title p{
+    width: 368px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: bold;
+}
+
+.faq-accord{
+    width: 668px;
+}
+
