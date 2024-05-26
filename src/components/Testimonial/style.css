@@ -1,5 +1,5 @@
 .testimonial{
-    padding: 100px 0px 0px 0px;
+    margin: 100px 0px 0px 0px;
 }
 
 .testimonial-text{
@@ -8,8 +8,10 @@
 }
 
 .testimonial-text h2{
+    font-weight: bold;
     font-size: 24px;
     line-height: 36px;
+    margin-bottom: 16px;
 }
 
 .testimonial-text p{

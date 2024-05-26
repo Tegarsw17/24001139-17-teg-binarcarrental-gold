@@ -7,7 +7,7 @@ const WhyUs = ({ id }) => {
   return (
     <div id={id} className="whyus-wrapper">
       <div className="whyus">
-        <h2 className="whyus-title">Why Us ?</h2>
+        <h3 className="whyus-title">Why Us ?</h3>
         <p className="whyus-desc">Mengapa harus pilih Binar Car Rental?</p>
         <div className="whyus-list">
           {whyUsData.map((item) => (

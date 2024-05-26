@@ -7,16 +7,26 @@
     border-radius: 8px;
 }
 
+.whyus-list-item-img{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .whyus-list-item img{
-    /* background-color: #F9CC00; */
-    padding: 6px;
     width: 20px;
     height: 20px;
-    border-radius: 50%;
+    
 }
 
 .whyus-list-item h4{
+    font-size: 16px;
+    font-weight: bold;
     line-height: 24px;
+    margin-bottom: 0px;
 }
 
 .whyus-list-item p{
@@ -24,4 +34,5 @@
     font-size: 14px;
     font-weight: bold;
     line-height: 20px;
+    margin-bottom: 0px;
 }

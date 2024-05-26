@@ -1,11 +1,11 @@
 .faq-wrapper{
     background-color: #ffffff;
+    margin: 100px 0px 0px 0px;
 }
 
 .faq{
     max-width: 1168px;
     margin: 0 auto;
-    padding: 100px 0px;
     display: flex;
     justify-content: space-between;
 }

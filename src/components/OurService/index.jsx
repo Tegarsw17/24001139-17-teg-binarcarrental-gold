@@ -14,7 +14,7 @@ const OurService = ({ id }) => {
           <div className="our-service-circle red"></div>
         </div>
         <div className="our-service-text">
-          <h2>Best Car Rental for any kind of trip in (Lokasimu)!</h2>
+          <h3>Best Car Rental for any kind of trip in (Lokasimu)!</h3>
           <p>
             Sewa mobil di (Lokasimu) bersama Binar Car Rental jaminan harga
             lebih murah dibandingkan yang lain, kondisi mobil baru, serta
