@@ -1,0 +1,22 @@
+.navbar-wrapper{
+    background-color: #F1F3FF;
+}
+
+.navbar{
+    max-width: 1055px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 269px 0px 136px;
+}
+
+.navbar-link{
+    display: flex;
+    gap: 20px;
+    font-size: 14px;
+}
+
+.navbar-link a{
+    text-decoration: none;
+    color: #000000;
+}
