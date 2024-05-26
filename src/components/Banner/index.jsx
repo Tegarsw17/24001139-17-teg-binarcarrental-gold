@@ -1,6 +1,7 @@
 import React from 'react'
 import './style.css'
 import CarImage from '../../assets/mobil_banner.png'
+import RentButton from '../RentButton'
 const Banner = ({ id }) => {
   return (
     <div id={id} className="banner">
@@ -11,7 +12,7 @@ const Banner = ({ id }) => {
           terbaik dengan harga terjangkau. Selalu siap melayani kebutuhanmu
           untuk sewa mobil selama 24 jam.
         </p>
-        <button>Mulai Sewa Mobil</button>
+        <RentButton link={'/car'} />
       </div>
       <div className="banner-image">
         <div className="banner-image-background"></div>

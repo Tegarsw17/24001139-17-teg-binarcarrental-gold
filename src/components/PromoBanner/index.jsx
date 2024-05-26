@@ -1,5 +1,6 @@
 import React from 'react'
 import './style.css'
+import RentButton from '../RentButton'
 const PromoBanner = () => {
   return (
     <div className="promo-banner-wrapper">
@@ -11,7 +12,7 @@ const PromoBanner = () => {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua.{' '}
         </p>
-        <button className="promo-banner-button">Mulai Sewa Mobil</button>
+        <RentButton link={'/car'} />
       </div>
     </div>
   )
