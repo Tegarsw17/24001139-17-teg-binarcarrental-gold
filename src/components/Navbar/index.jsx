@@ -9,7 +9,7 @@ const Navbar = () => {
         <Logo />
         <div className="navbar-link">
           {navbarLink.map((item) => (
-            <a>{item}</a>
+            <a href={'#' + item.id_name}>{item.title}</a>
           ))}
         </div>
       </div>

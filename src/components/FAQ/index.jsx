@@ -3,9 +3,9 @@ import './style.css'
 import { Accordion } from 'react-bootstrap'
 import { faqData } from '../../utils/dummyData'
 import FAQDropdown from '../FAQDropdown'
-const FAQ = () => {
+const FAQ = ({ id }) => {
   return (
-    <div className="faq-wrapper">
+    <div id={id} className="faq-wrapper">
       <div className="faq">
         <div className="faq-title">
           <h2>Frequently Asked Question</h2>

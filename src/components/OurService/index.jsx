@@ -2,9 +2,9 @@ import React from 'react'
 import './style.css'
 import GirlImage from '../../assets/girl_ourservice.png'
 import { ourServiceData } from '../../utils/dummyData'
-const OurService = () => {
+const OurService = ({ id }) => {
   return (
-    <div className="our-service-wrapper">
+    <div id={id} className="our-service-wrapper">
       <div className="our-service">
         <div className="our-service-image">
           <div className="our-service-bacground-circle"></div>

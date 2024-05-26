@@ -3,9 +3,9 @@ import './style.css'
 import { whyUsData } from '../../utils/dummyData'
 import WhyUsCard from '../WhyUsCard'
 
-const WhyUs = () => {
+const WhyUs = ({ id }) => {
   return (
-    <div className="whyus-wrapper">
+    <div id={id} className="whyus-wrapper">
       <div className="whyus">
         <h2 className="whyus-title">Why Us ?</h2>
         <p className="whyus-desc">Mengapa harus pilih Binar Car Rental?</p>

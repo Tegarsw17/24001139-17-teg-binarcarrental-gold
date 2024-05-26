@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons'
 import { testimonials } from '../../utils/dummyData'
 import TestimonialCard from '../TestimonialCard'
-const Testimonial = () => {
+const Testimonial = ({ id }) => {
   let sliderRef = useRef(null)
   const next = () => {
     sliderRef.slickNext()
@@ -24,7 +24,7 @@ const Testimonial = () => {
   }
 
   return (
-    <div className="testimonial">
+    <div id={id} className="testimonial">
       <div className="testimonial-text">
         <h2>Testimonial</h2>
         <p>Berbagai review positif dari para pelanggan kami</p>

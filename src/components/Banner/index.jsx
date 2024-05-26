@@ -1,9 +1,9 @@
 import React from 'react'
 import './style.css'
 import CarImage from '../../assets/mobil_banner.png'
-const Banner = () => {
+const Banner = ({ id }) => {
   return (
-    <div className="banner">
+    <div id={id} className="banner">
       <div className="banner-text">
         <h1>Sewa & Rental Mobil Terbaik di kawasan (Lokasimu)</h1>
         <p>
