@@ -4,8 +4,18 @@ import ClockIcon from '../assets/clock.png'
 import AwardIcon from '../assets/award.png'
 import ProfileFirst from '../assets/profile2.png'
 import ProfileSecond from '../assets/profile3.png'
+import FBIcon from '../assets/facebook.png'
+import IGIcon from '../assets/instagram.png'
+import TwitterIcon from '../assets/twitter.png'
+import MailIcon from '../assets/mail.png'
+import TwitchIcon from '../assets/twitch.png'
 
-export const navbarLink = ['Our Services', 'Why Us', 'Testimonial', 'FAQ']
+export const navbarLink = [
+  { title: 'Our Services', id_name: 'ourservice' },
+  { title: 'Why Us', id_name: 'whyus' },
+  { title: 'Testimonial', id_name: 'testimonial' },
+  { title: 'FAQ', id_name: 'faq' },
+]
 
 export const ourServiceData = [
   'Sewa Mobil Dengan Supir di Bali 12 Jam',
@@ -103,3 +113,5 @@ export const faqData = [
     desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
   },
 ]
+
+export const socialIcon = [FBIcon, IGIcon, TwitterIcon, MailIcon, TwitchIcon]

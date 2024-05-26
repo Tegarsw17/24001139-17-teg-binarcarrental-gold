@@ -1,5 +1,6 @@
 import Banner from './components/Banner'
 import FAQ from './components/FAQ'
+import Footer from './components/Footer'
 import Navbar from './components/Navbar'
 import OurService from './components/OurService'
 import PromoBanner from './components/PromoBanner'
@@ -11,11 +12,12 @@ function App() {
     <div>
       <Navbar />
       <Banner />
-      <OurService />
-      <WhyUs />
-      <Testimonial />
+      <OurService id="ourservice" />
+      <WhyUs id="whyus" />
+      <Testimonial id="testimonial" />
       <PromoBanner />
-      <FAQ />
+      <FAQ id="faq" />
+      <Footer />
     </div>
   )
 }
