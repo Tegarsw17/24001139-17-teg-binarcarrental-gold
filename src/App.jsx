@@ -1,24 +1,15 @@
-import Banner from './components/Banner'
-import FAQ from './components/FAQ'
-import Footer from './components/Footer'
-import Navbar from './components/Navbar'
-import OurService from './components/OurService'
-import PromoBanner from './components/PromoBanner'
-import Testimonial from './components/Testimonial'
-import WhyUs from './components/WhyUs'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Home from './pages/Home'
+import Car from './pages/Car'
 
 function App() {
   return (
-    <div>
-      <Navbar />
-      <Banner />
-      <OurService id="ourservice" />
-      <WhyUs id="whyus" />
-      <Testimonial id="testimonial" />
-      <PromoBanner />
-      <FAQ id="faq" />
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/car" element={<Car />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
