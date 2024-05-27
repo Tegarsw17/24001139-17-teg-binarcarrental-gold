@@ -9,6 +9,7 @@ import IGIcon from '../assets/instagram.png'
 import TwitterIcon from '../assets/twitter.png'
 import MailIcon from '../assets/mail.png'
 import TwitchIcon from '../assets/twitch.png'
+import CarImage from '../assets/car-show.png'
 
 export const navbarLink = [
   { title: 'Our Services', id_name: 'ourservice' },
@@ -115,3 +116,34 @@ export const faqData = [
 ]
 
 export const socialIcon = [FBIcon, IGIcon, TwitterIcon, MailIcon, TwitchIcon]
+
+export const itemList = [
+  {
+    id: 1,
+    image: CarImage,
+    brand: 'Inova',
+    price: 500000,
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.',
+  },
+  {
+    id: 2,
+    image: CarImage,
+    brand: 'Inova',
+    price: 500000,
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.',
+  },
+  {
+    id: 3,
+    image: CarImage,
+    brand: 'Inova',
+    price: 500000,
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.',
+  },
+  {
+    id: 4,
+    image: CarImage,
+    brand: 'Inova',
+    price: 500000,
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.',
+  },
+]
