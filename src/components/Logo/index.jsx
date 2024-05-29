@@ -1,9 +1,10 @@
 import React from 'react'
 import './style.css'
+import LogoImage from '../../assets/logo.png'
 const Logo = () => {
   return (
     <div className="logo">
-      <p>Logo</p>
+      <img src={LogoImage}></img>
     </div>
   )
 }
