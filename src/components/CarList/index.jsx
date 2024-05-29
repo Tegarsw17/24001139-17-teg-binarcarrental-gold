@@ -2,18 +2,18 @@ import React from 'react'
 import './style.css'
 import { itemList } from '../../utils/dummyData'
 import CarCard from '../CarCard'
-const CarList = () => {
+const CarList = ({ data }) => {
   return (
     <div className="car-list-wrapper">
       <div className="car-list">
-        {itemList.map((item) => (
+        {data.map((item, index) => (
           <CarCard
-            key={item.id}
-            id={item.id}
-            brand={item.brand}
-            price={item.price}
-            desc={item.desc}
-            image={item.image}
+            key={index}
+            id={item.id} //id
+            name={item.name} // name
+            price={item.price} //price
+            desc={item.desc} // buat default
+            image={item.image} //image-> buat default jika null
           />
         ))}
       </div>
