@@ -6,3 +6,15 @@ export const formatRupiah = (number) => {
     maximumFractionDigits: 0,
   }).format(number)
 }
+
+export const formatSizeCar = (size) => {
+  if (size === 'small') {
+    return '2-4 Orang'
+  }
+  if (size === 'medium') {
+    return '4-6 Orang'
+  }
+  if (size === 'large') {
+    return '6-8 Orang'
+  }
+}
