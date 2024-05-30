@@ -6,40 +6,66 @@ import BannerSecond from '../../components/BannerSecond'
 import CarList from '../../components/CarList'
 import PaginationNumber from '../../components/Pagination'
 import axios from 'axios'
+import { useLocation } from 'react-router-dom'
 
 const Car = () => {
+  const location = useLocation()
   const [data, setData] = useState([])
   const [curentPage, setCurentPage] = useState(1)
   const [totalPages, setTotalPages] = useState(1)
-  const fetchData = async (page) => {
-    console.log('Halaman Sekarang: ', page)
+  const [queryApi, setQueryApi] = useState({})
+
+  const handleSearch = async (queries, page = 1) => {
     try {
-      const apiURL = `https://api-car-rental.binaracademy.org/customer/v2/car?page=${curentPage}`
-      const response = await axios.get(apiURL)
-      console.log(response.data)
+      const { nameCar, capacityCar, priceCar, statusCar } = queries
+      const response = await axios.get(
+        'https://api-car-rental.binaracademy.org/customer/v2/car',
+        {
+          params: {
+            name: nameCar,
+            category: capacityCar,
+            isRented: statusCar,
+            minPrice: priceCar,
+            maxPrice: priceCar,
+            page,
+            pageSize: 10,
+          },
+          timeout: 10000,
+        }
+      )
       setData(response.data.cars)
       setCurentPage(response.data.page)
       setTotalPages(response.data.pageCount)
     } catch (error) {
-      console.error('Error fetching data:', error)
+      console.error(
+        'Error fetching data',
+        error.response ? error.response.data : error.message
+      )
     }
   }
 
   useEffect(() => {
-    fetchData(curentPage)
-  }, [curentPage])
+    if (location.state) {
+      setQueryApi(location.state)
+      handleSearch(location.state, 1)
+    }
+  }, [location.state])
 
   const handlePageChange = (page) => {
-    if (page >= 1 && page <= totalPages) {
-      setCurentPage(page)
-    }
+    handleSearch(queryApi, page)
+    setCurentPage(page)
   }
 
+  const searchCar = (q) => {
+    setQueryApi(q)
+    handleSearch(q, 1)
+  }
+  console.log(data.length ? 'ada data' : 'tidak ada')
   return (
     <div>
       <Navbar />
       <BannerSecond />
-      <SearchCar />
+      <SearchCar onSearch={searchCar} />
       <CarList data={data} />
       <PaginationNumber
         total={totalPages}

@@ -6,6 +6,9 @@ const CarList = ({ data }) => {
   return (
     <div className="car-list-wrapper">
       <div className="car-list">
+        {data.length === 0 && (
+          <h2 style={{ alignSelf: 'center' }}>Data not found</h2>
+        )}
         {data.map((item, index) => (
           <CarCard
             key={index}
