@@ -2,8 +2,6 @@ import Pagination from 'react-bootstrap/Pagination'
 import './style.css'
 
 const PaginationNumber = ({ total, active, onPageChange }) => {
-  // let total = 10 //total pages
-  // let active = 6 //pages
   let items = []
 
   if (total < 5) {
