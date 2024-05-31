@@ -12,7 +12,7 @@ const PromoBanner = () => {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua.{' '}
         </p>
-        <RentButton link={'/car'} />
+        <RentButton link={'/search'} />
       </div>
     </div>
   )

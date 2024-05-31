@@ -8,7 +8,6 @@ import NoImage from '../../assets/no-image.png'
 import { detailCar } from '../../utils/dummyData'
 
 const CarDetailCard = ({ data }) => {
-  console.log('data detail', data)
   return (
     <div className="car-detail-wrapper">
       <div className="car-detail">
@@ -18,7 +17,7 @@ const CarDetailCard = ({ data }) => {
             <p>{detailCar.include.title}</p>
             <ul>
               {detailCar.include.data.map((item, index) => (
-                <li>{item}</li>
+                <li key={index}>{item}</li>
               ))}
             </ul>
           </div>
@@ -26,7 +25,7 @@ const CarDetailCard = ({ data }) => {
             <p>{detailCar.exclude.title}</p>
             <ul>
               {detailCar.exclude.data.map((item, index) => (
-                <li>{item}</li>
+                <li key={index}>{item}</li>
               ))}
             </ul>
           </div>
@@ -34,7 +33,7 @@ const CarDetailCard = ({ data }) => {
             <p>{detailCar.refund.title}</p>
             <ul>
               {detailCar.refund.data.map((item, index) => (
-                <li>{item}</li>
+                <li key={index}>{item}</li>
               ))}
             </ul>
           </div>

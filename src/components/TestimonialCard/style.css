@@ -28,3 +28,20 @@
 .testimonial-card-image img{
     width: 80px;
 }
+
+@media screen and (max-width:450px) {
+    .testimonial-card{
+        flex-direction: column;
+        height: 400px;
+        width: 100%;
+        gap: 25px;
+    }
+
+    .testimonial-card-text{
+        width: 80%;
+    }
+
+    .testimonial-card-text{
+        text-align: center;
+    }
+}

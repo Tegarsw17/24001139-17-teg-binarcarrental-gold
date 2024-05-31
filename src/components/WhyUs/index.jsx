@@ -10,8 +10,9 @@ const WhyUs = ({ id }) => {
         <h3 className="whyus-title">Why Us ?</h3>
         <p className="whyus-desc">Mengapa harus pilih Binar Car Rental?</p>
         <div className="whyus-list">
-          {whyUsData.map((item) => (
+          {whyUsData.map((item, index) => (
             <WhyUsCard
+              key={index}
               icon={item.icon}
               title={item.title}
               desc={item.desc}

@@ -21,6 +21,17 @@ const Testimonial = ({ id }) => {
     slidesToShow: 1,
     slidesToScroll: 1,
     variableWidth: true,
+    responsive: [
+      {
+        breakpoint: 480,
+        settings: {
+          centerMode: false,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          variableWidth: false,
+        },
+      },
+    ],
   }
 
   return (
