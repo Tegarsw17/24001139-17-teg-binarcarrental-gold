@@ -2,7 +2,7 @@ import React from 'react'
 import './style.css'
 const TestimonialCard = ({ image, rating, desc, name, age, address }) => {
   return (
-    <div style={{ width: 650 }}>
+    <div>
       <div className="testimonial-card">
         <div className="testimoial-card-image">
           <img src={image}></img>

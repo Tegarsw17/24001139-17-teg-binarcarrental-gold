@@ -18,3 +18,15 @@ export const formatSizeCar = (size) => {
     return '6-8 Orang'
   }
 }
+
+export const minMaxPriceValue = (priceRange) => {
+  if (priceRange == 'lt_400') {
+    return [0, 400000]
+  } else if (priceRange == '400_600') {
+    return [400000, 600000]
+  } else if (priceRange == 'gt_600') {
+    return [600000, 10000000]
+  } else {
+    return ['', '']
+  }
+}

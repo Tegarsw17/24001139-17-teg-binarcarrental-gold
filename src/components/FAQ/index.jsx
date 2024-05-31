@@ -14,7 +14,12 @@ const FAQ = ({ id }) => {
         <div className="faq-accord">
           <Accordion>
             {faqData.map((item, index) => (
-              <FAQDropdown title={item.title} desc={item.desc} index={index} />
+              <FAQDropdown
+                key={index}
+                title={item.title}
+                desc={item.desc}
+                index={index}
+              />
             ))}
           </Accordion>
         </div>

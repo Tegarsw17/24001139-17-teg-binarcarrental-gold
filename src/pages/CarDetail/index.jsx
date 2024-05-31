@@ -14,7 +14,6 @@ const CarDetail = () => {
     try {
       const apiURL = `https://api-car-rental.binaracademy.org/customer/car/${idCar}`
       const response = await axios.get(apiURL)
-      console.log(response.data)
       setDetailCarData(response.data)
     } catch (error) {
       console.error('Error fetching data:', error)

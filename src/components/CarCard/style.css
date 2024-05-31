@@ -53,3 +53,27 @@
     height: 100%;
     object-fit: contain;
 }
+
+
+@media screen and (max-width:450px) {
+    .card-car{
+        width: calc((370px - (24px * 1)) / 2);
+        height: 250px;
+        padding: 15px;
+    }
+
+    .card-car-text p:nth-child(3){
+        /* height: 60px;
+        overflow: hidden;
+        font-weight: 500; */
+        display: none;
+    }
+
+    .card-car button{
+        padding: 7px;
+    }
+
+    .card-car-image{
+        height: 100px;
+    }
+}

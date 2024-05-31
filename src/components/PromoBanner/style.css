@@ -39,3 +39,22 @@
     background-color: #5CB85F;
     border: none;
 }
+
+@media screen and (max-width:768px) {
+    .promo-banner-wrapper{
+        padding: 0px 20px;
+    }
+
+
+}
+
+@media screen and (max-width:450px) {
+
+    .promo-banner-title{
+        width: 80%;
+    }
+    .promo-banner-desc{
+        width: 80%;
+    }
+}
+

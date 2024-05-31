@@ -12,15 +12,17 @@ const Footer = () => {
           <p>081-233-334-808</p>
         </div>
         <div className="footer-link">
-          {navbarLink.map((item) => (
-            <a href={'#' + item.id_name}>{item.title}</a>
+          {navbarLink.map((item, index) => (
+            <a key={index} href={'#' + item.id_name}>
+              {item.title}
+            </a>
           ))}
         </div>
         <div className="footer-social">
           <p>Connect with us</p>
           <div className="footer-social-list">
-            {socialIcon.map((item) => (
-              <button>
+            {socialIcon.map((item, index) => (
+              <button key={index}>
                 <img src={item}></img>
               </button>
             ))}
