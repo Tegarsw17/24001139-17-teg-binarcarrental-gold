@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
-import { Col, Form, Row } from 'react-bootstrap'
 import './style.css'
-import RentButton from '../RentButton'
-import { useNavigate } from 'react-router-dom'
+
 const SearchCar = ({ isDisabled = false, onSearch }) => {
   const [isFormFocused, setIsFormFocused] = useState(false)
   const [nameCar, setNameCar] = useState('')
@@ -38,7 +36,8 @@ const SearchCar = ({ isDisabled = false, onSearch }) => {
   return (
     <div className="search-car-wrapper">
       <div className="search-car">
-        <Form
+        <form
+          className="search-bar"
           onFocus={() => setIsFormFocused(true)}
           onBlur={() => setIsFormFocused(false)}
           onSubmit={(e) => {
@@ -46,88 +45,84 @@ const SearchCar = ({ isDisabled = false, onSearch }) => {
             sendQueryApi()
           }}
         >
-          <Row className="align-items-end">
-            <Col>
-              <Form.Group>
-                <Form.Label>Nama Mobil</Form.Label>
-                <Form.Control
-                  disabled={isDisabled}
-                  className="form-control-custom"
-                  placeholder="Ketik nama/tipe mobil"
-                  onChange={handleInputName}
-                />
-              </Form.Group>
-            </Col>
-            <Col>
-              <Form.Label>Kategori</Form.Label>
-              <Form.Select
-                disabled={isDisabled}
-                className="form-control-custom-select"
-                onChange={handleSelectCapacity}
-              >
-                <option value={''} className="custom-select-option">
-                  Masukan Kapasitas Mobil
-                </option>
-                <option value={'small'} className="custom-select-option">
-                  2 - 4 orang
-                </option>
-                <option value={'medium'} className="custom-select-option">
-                  4 - 6 orang
-                </option>
-                <option value={'hard'} className="custom-select-option">
-                  6 - 8 orang
-                </option>
-              </Form.Select>
-            </Col>
-            <Col>
-              <Form.Label>Harga</Form.Label>
-              <Form.Select
-                disabled={isDisabled}
-                className="form-control-custom-select"
-                onChange={handleSelectPrice}
-              >
-                <option value={''} className="custom-select-option">
-                  Masukan Sewa perhari
-                </option>
-                <option value={'lt_400'} className="custom-select-option">
-                  &lt; Rp 400.000
-                </option>
-                <option value={'400_600'} className="custom-select-option">
-                  Rp 400.000 - Rp 600.000
-                </option>
-                <option value={'gt_600'} className="custom-select-option">
-                  &gt; Rp 600.000
-                </option>
-              </Form.Select>
-            </Col>
-            <Col>
-              <Form.Label>Status</Form.Label>
-              <Form.Select
-                disabled={isDisabled}
-                className="form-control-custom-select"
-                onChange={handleSelectStatus}
-              >
-                <option value={''} className="custom-select-option">
-                  Status
-                </option>
-                <option value={true} className="custom-select-option">
-                  Disewa
-                </option>
-                <option value={false} className="custom-select-option">
-                  Tersedia
-                </option>
-              </Form.Select>
-            </Col>
-            <Col
-              md={1}
-              style={{ width: '12%', display: isDisabled ? 'none' : '' }}
+          <div className="form-group">
+            <label htmlFor="car_name">Nama Mobil</label>
+            <input
+              type="text"
+              placeholder="Ketik nama/tipe mobil"
+              className="input-field"
+              onChange={handleInputName}
+              disabled={isDisabled}
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="category">Kategori</label>
+            <select
+              className="input-field"
+              onChange={handleSelectCapacity}
+              disabled={isDisabled}
             >
-              <button type="submit" className="search-button">
-                Cari Mobil
-              </button>
-            </Col>
-          </Row>
-        </Form>
+              <option value={''} className="">
+                Masukan Kapasitas Mobil
+              </option>
+              <option value={'small'} className="">
+                2 - 4 orang
+              </option>
+              <option value={'medium'} className="">
+                4 - 6 orang
+              </option>
+              <option value={'hard'} className="">
+                6 - 8 orang
+              </option>
+            </select>
+          </div>
+          <div className="form-group">
+            <label htmlFor="price">Harga</label>
+            <select
+              className="input-field"
+              onChange={handleSelectPrice}
+              disabled={isDisabled}
+            >
+              <option value={''} className="">
+                Masukan Sewa perhari
+              </option>
+              <option value={'lt_400'} className="">
+                &lt; Rp 400.000
+              </option>
+              <option value={'400_600'} className="">
+                Rp 400.000 - Rp 600.000
+              </option>
+              <option value={'gt_600'} className="">
+                &gt; Rp 600.000
+              </option>
+            </select>
+          </div>
+          <div className="form-group">
+            <label htmlFor="status">Status</label>
+            <select
+              className="input-field"
+              onChange={handleSelectStatus}
+              disabled={isDisabled}
+            >
+              <option value={''} className="">
+                Status
+              </option>
+              <option value={true} className="">
+                Disewa
+              </option>
+              <option value={false} className="">
+                Tersedia
+              </option>
+            </select>
+          </div>
+          <button
+            style={{ display: isDisabled ? 'none' : '' }}
+            type="submit"
+            className="search-button"
+          >
+            Cari Mobil
+          </button>
+        </form>
       </div>
       <div
         className="black-screen-hover"

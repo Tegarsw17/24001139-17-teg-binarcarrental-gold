@@ -7,7 +7,6 @@
     top: -600px;
     opacity: 0.6;
     transition: background-color 0.3s;
-    /* display: none; */
 }
 
 .search-car-wrapper{
@@ -78,3 +77,98 @@
 .col-md-1{
     width: 12%;
 }
+
+
+.search-bar {
+    display: flex;
+    gap: 10px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.input-field {
+    padding: 7px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    flex: 1;
+    background-color: #ffffff;
+    font-size: 12px;
+    font-weight: 300;
+    font-family: 'Rubik';
+    color: #999999;
+}
+
+.input-field:focus{
+    border: 1px solid #5CB85F;
+}
+
+.input-field select {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    background-color: #fff;
+}
+
+.search-bar .form-group select option{
+    background-color: #ffffff;
+    height: 36px;
+    padding: 8px;
+    font-size: 14px;
+    font-family: "Rubik";
+}
+
+.search-bar .form-group select option:hover{
+    box-shadow: 0 0 10px 100px green inset;
+}
+
+.search-button {
+    height: 36px;
+    border: none;
+    border-radius: 5px;
+    background-color: #5CB85F;
+    color: #fff;
+    cursor: pointer;
+    align-self: flex-end;
+}
+
+.search-button:hover {
+    background-color: #218838;
+}
+
+.search-bar label{
+    font-family: "Rubik";
+    font-size: 12px;
+    color: #3C3C3C;
+    margin-bottom: 5px;
+}
+
+.form-group input:disabled{
+    background-color: #D0D0D0;
+}
+
+.form-group select:disabled{
+    background-color: #D0D0D0;
+}
+
+
+@media screen and (max-width:768px) {
+    .search-car{
+        bottom: 10px;
+        max-width: 500px;
+        height: 350px;
+        
+    }
+
+    .search-bar{
+        flex-direction: column;
+    }
+}
+    @media screen and (max-width:450px) {
+        .search-car{
+            margin:0 20px;
+        }
+    }

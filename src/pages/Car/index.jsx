@@ -7,6 +7,7 @@ import CarList from '../../components/CarList'
 import PaginationNumber from '../../components/Pagination'
 import axios from 'axios'
 import { useLocation } from 'react-router-dom'
+import { minMaxPriceValue } from '../../utils/formatUtil'
 
 const Car = () => {
   const location = useLocation()
@@ -18,6 +19,7 @@ const Car = () => {
   const handleSearch = async (queries, page = 1) => {
     try {
       const { nameCar, capacityCar, priceCar, statusCar } = queries
+      const [minPrice, maxprice] = minMaxPriceValue(priceCar)
       const response = await axios.get(
         'https://api-car-rental.binaracademy.org/customer/v2/car',
         {
@@ -25,8 +27,8 @@ const Car = () => {
             name: nameCar,
             category: capacityCar,
             isRented: statusCar,
-            minPrice: priceCar,
-            maxPrice: priceCar,
+            minPrice: minPrice,
+            maxPrice: maxprice,
             page,
             pageSize: 10,
           },
@@ -60,7 +62,7 @@ const Car = () => {
     setQueryApi(q)
     handleSearch(q, 1)
   }
-  console.log(data.length ? 'ada data' : 'tidak ada')
+
   return (
     <div>
       <Navbar />

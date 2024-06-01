@@ -17,13 +17,36 @@
 }
 
 .faq-title p{
-    width: 368px;
+    width: 100%;
     font-size: 14px;
     line-height: 20px;
     font-weight: bold;
 }
 
 .faq-accord{
-    width: 668px;
+    width: 100%;
+}
+
+@media screen and (max-width:768px) {
+    .faq{
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .faq-title{
+        margin: 20px 0px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:450px) {
+    .faq{
+        flex-direction: column;
+        width: 370px;
+    }
+
+    .faq-accord{
+        width: 100%;
+    }
 }
 

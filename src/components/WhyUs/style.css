@@ -27,3 +27,28 @@
     gap: 32px;
 }
 
+@media screen and (max-width:768px) {
+    .whyus-list{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .whyus-title{
+        text-align: center;
+    }
+    .whyus-desc{
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:450px) {
+    .whyus{
+        width: 370px;
+    }
+
+
+    .whyus-list{
+        flex-direction: column;
+    }
+}
+
